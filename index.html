@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Risk Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome screen -->
+    <div id="welcome-screen" class="screen">
+        <h1>Balloon Risk Game</h1>
+        <p>Inflate the balloon to earn points, but be careful - it might burst!</p>
+        <p>Cash out before it bursts to keep your points.</p>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <!-- Game screen -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-info">
+            <div>Balloon: <span id="balloon-count">1</span>/10</div>
+            <div>Current Points: <span id="current-points">0</span></div>
+            <div>Total Score: <span id="total-score">0</span></div>
+        </div>
+
+        <div class="balloon-container">
+            <div id="balloon"></div>
+        </div>
+
+        <div class="controls">
+            <button id="pump-button">Pump</button>
+            <button id="cashout-button">Cash Out</button>
+        </div>
+    </div>
+
+    <!-- Results screen -->
+    <div id="results-screen" class="screen hidden">
+        <h1>Game Over</h1>
+        <p>Final Score: <span id="final-score">0</span></p>
+
+        <div id="risk-assessment">
+            <h2>Your Risk Profile</h2>
+            <p id="risk-description"></p>
+        </div>
+
+        <button id="play-again-button">Play Again</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
